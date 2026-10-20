@@ -51,14 +51,14 @@ export function WeAim() {
       <div className="relative mx-auto max-w-4xl px-6 py-20 text-center md:py-24">
         <Logo className="mx-auto h-10 md:h-12" />
         <p className="eyebrow mt-6 !text-foreground">We Aim</p>
-        <p className="mt-4 font-serif text-xl leading-snug md:text-[1.6rem] text-navy-fade">
+        <p className="mt-4 font-serif text-xl leading-snug md:text-[1.6rem] text-foreground">
           We aim to be a leading platform connecting people, academia, businesses, industry, NGOs, government, media,
           and other stakeholders to advance responsible governance, sustainable value creation, and shared prosperity,
           enhancing human well-being across generations.
         </p>
         <div className="mx-auto my-8 h-px w-10 bg-foreground" />
         <p className="eyebrow">Our Commitment</p>
-        <p className="mt-4 font-serif text-base leading-relaxed md:text-lg text-burgundy-fade">
+        <p className="mt-4 font-serif text-base leading-relaxed md:text-lg text-burgundy">
           Our Commitment to foster a dynamic and collaborative platform for innovation, knowledge exchange, and
           strategic partnerships, transforming shared challenges into opportunities for sustainable growth,
           resilience, and lasting impact; advancing through three core strategic initiatives: Sustainable Human
