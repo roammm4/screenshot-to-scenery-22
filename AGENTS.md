@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Architecture
+- Shared ARVA section components live in src/components/arva; each route file only composes them, so the same content stays consistent across pages.
