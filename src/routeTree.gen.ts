@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcknowledgementRouteImport } from './routes/acknowledgement'
+import { Route as BackgroundRouteImport } from './routes/background'
+import { Route as CapabilitiesRouteImport } from './routes/capabilities'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ContributionRouteImport } from './routes/contribution'
+import { Route as NetworkRouteImport } from './routes/network'
+import { Route as StrategicInitiativesRouteImport } from './routes/strategic-initiatives'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcknowledgementRoute = AcknowledgementRouteImport.update({
+  id: '/acknowledgement',
+  path: '/acknowledgement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BackgroundRoute = BackgroundRouteImport.update({
+  id: '/background',
+  path: '/background',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilitiesRoute = CapabilitiesRouteImport.update({
+  id: '/capabilities',
+  path: '/capabilities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContributionRoute = ContributionRouteImport.update({
+  id: '/contribution',
+  path: '/contribution',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkRoute = NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StrategicInitiativesRoute = StrategicInitiativesRouteImport.update({
+  id: '/strategic-initiatives',
+  path: '/strategic-initiatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acknowledgement': typeof AcknowledgementRoute
+  '/background': typeof BackgroundRoute
+  '/capabilities': typeof CapabilitiesRoute
+  '/contact': typeof ContactRoute
+  '/contribution': typeof ContributionRoute
+  '/network': typeof NetworkRoute
+  '/strategic-initiatives': typeof StrategicInitiativesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acknowledgement': typeof AcknowledgementRoute
+  '/background': typeof BackgroundRoute
+  '/capabilities': typeof CapabilitiesRoute
+  '/contact': typeof ContactRoute
+  '/contribution': typeof ContributionRoute
+  '/network': typeof NetworkRoute
+  '/strategic-initiatives': typeof StrategicInitiativesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acknowledgement': typeof AcknowledgementRoute
+  '/background': typeof BackgroundRoute
+  '/capabilities': typeof CapabilitiesRoute
+  '/contact': typeof ContactRoute
+  '/contribution': typeof ContributionRoute
+  '/network': typeof NetworkRoute
+  '/strategic-initiatives': typeof StrategicInitiativesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/acknowledgement'
+    | '/background'
+    | '/capabilities'
+    | '/contact'
+    | '/contribution'
+    | '/network'
+    | '/strategic-initiatives'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/acknowledgement'
+    | '/background'
+    | '/capabilities'
+    | '/contact'
+    | '/contribution'
+    | '/network'
+    | '/strategic-initiatives'
+  id:
+    | '__root__'
+    | '/'
+    | '/acknowledgement'
+    | '/background'
+    | '/capabilities'
+    | '/contact'
+    | '/contribution'
+    | '/network'
+    | '/strategic-initiatives'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcknowledgementRoute: typeof AcknowledgementRoute
+  BackgroundRoute: typeof BackgroundRoute
+  CapabilitiesRoute: typeof CapabilitiesRoute
+  ContactRoute: typeof ContactRoute
+  ContributionRoute: typeof ContributionRoute
+  NetworkRoute: typeof NetworkRoute
+  StrategicInitiativesRoute: typeof StrategicInitiativesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acknowledgement': {
+      id: '/acknowledgement'
+      path: '/acknowledgement'
+      fullPath: '/acknowledgement'
+      preLoaderRoute: typeof AcknowledgementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/background': {
+      id: '/background'
+      path: '/background'
+      fullPath: '/background'
+      preLoaderRoute: typeof BackgroundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capabilities': {
+      id: '/capabilities'
+      path: '/capabilities'
+      fullPath: '/capabilities'
+      preLoaderRoute: typeof CapabilitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contribution': {
+      id: '/contribution'
+      path: '/contribution'
+      fullPath: '/contribution'
+      preLoaderRoute: typeof ContributionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network': {
+      id: '/network'
+      path: '/network'
+      fullPath: '/network'
+      preLoaderRoute: typeof NetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strategic-initiatives': {
+      id: '/strategic-initiatives'
+      path: '/strategic-initiatives'
+      fullPath: '/strategic-initiatives'
+      preLoaderRoute: typeof StrategicInitiativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcknowledgementRoute: AcknowledgementRoute,
+  BackgroundRoute: BackgroundRoute,
+  CapabilitiesRoute: CapabilitiesRoute,
+  ContactRoute: ContactRoute,
+  ContributionRoute: ContributionRoute,
+  NetworkRoute: NetworkRoute,
+  StrategicInitiativesRoute: StrategicInitiativesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
